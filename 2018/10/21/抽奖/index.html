@@ -5,17 +5,17 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sbsbsb sbbbdskjgfshdjk">
+  <meta name="description" content="#include&amp;lt;stdio.h&amp;gt; #include&amp;lt;stdlib.h&amp;gt; #include&amp;lt;time.h&amp;gt;int main(void){    int guess=0;    int count=4;    int chosen=0;    int limit=20;    srand(time(NULL));    chosen=1+rand()%limit;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://Squidoffer.github.io/2019/08/03/first/index.html">
+<meta property="og:url" content="http://Squidoffer.github.io/2018/10/21/抽奖/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="sbsbsb sbbbdskjgfshdjk">
+<meta property="og:description" content="#include&amp;lt;stdio.h&amp;gt; #include&amp;lt;stdlib.h&amp;gt; #include&amp;lt;time.h&amp;gt;int main(void){    int guess=0;    int count=4;    int chosen=0;    int limit=20;    srand(time(NULL));    chosen=1+rand()%limit;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-03T11:33:22.300Z">
+<meta property="og:updated_time" content="2018-10-21T09:38:25.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="sbsbsb sbbbdskjgfshdjk">
+<meta name="twitter:description" content="#include&amp;lt;stdio.h&amp;gt; #include&amp;lt;stdlib.h&amp;gt; #include&amp;lt;time.h&amp;gt;int main(void){    int guess=0;    int count=4;    int chosen=0;    int limit=20;    srand(time(NULL));    chosen=1+rand()%limit;">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-抽奖" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/03/first/" class="article-date">
-  <time datetime="2019-08-03T11:05:49.904Z" itemprop="datePublished">2019-08-03</time>
+    <a href="/2018/10/21/抽奖/" class="article-date">
+  <time datetime="2018-10-21T09:09:58.521Z" itemprop="datePublished">2018-10-21</time>
 </a>
     
   </div>
@@ -76,13 +76,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="sb"><a href="#sb" class="headerlink" title="sb"></a>sb</h1><h2 id="sb-1"><a href="#sb-1" class="headerlink" title="sb"></a>sb</h2><p>sb</p>
-<p>sbbb<br>dskjgfshdjk</p>
+        <p>#include&lt;stdio.h&gt;</p>
+<p>#include&lt;stdlib.h&gt;</p>
+<p>#include&lt;time.h&gt;<br>int main(void)<br>{<br>    int guess=0;<br>    int count=4;<br>    int chosen=0;<br>    int limit=20;<br>    srand(time(NULL));<br>    chosen=1+rand()%limit;</p>
+<pre><code>printf(&quot;This is a guessing game.\nYou have to choose a number between 1 to 20 to join in.&quot;);
+for(;count&gt;0;--count)
+{
+printf(&quot;\nyou have %d tr%s left&quot;,count,count==1?&quot;y&quot;:&quot;ies&quot;);
+printf(&quot;\nNow you can enter a guess:&quot;);
+scanf(&quot;%d&quot;,&amp;guess);
+if((guess&gt;20)||(guess&lt;1))
+guess=21;
+if(guess==chosen)
+guess=22;
+switch(guess)
+{
+    case 22:
+        printf(&quot;\nCongratulations,you win the first prize.&quot;);
+        goto there;
+    case 21:
+        printf(&quot;\n you are not putting a right number.&quot;);
+        break;
+    default:
+        printf(&quot;\nthe number is %s than this.&quot;,guess&gt;chosen?&quot;more&quot;:&quot;less&quot;);
+        break;
+}
+}
+printf(&quot;\nyou have had four tries and failed.the number is %d.&quot;,chosen);
+there:return 0;</code></pre><p>}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://Squidoffer.github.io/2019/08/03/first/" data-id="cjyvgiq810000vcuhm8q8vc6s" class="article-share-link">Share</a>
+      <a data-url="http://Squidoffer.github.io/2018/10/21/抽奖/" data-id="cjyvgtdf20002vcuha5g0t62l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -91,11 +117,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2019/08/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/08/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
     </a>
+  
   
 </nav>
 
